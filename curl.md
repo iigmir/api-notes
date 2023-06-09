@@ -13,3 +13,11 @@ For example, if you want to send a POST request to https://example.com/api with 
 curl -X POST https://example.com/api -d '{"name": "John", "age": 30}'
 
 This will send the POST request to the specified URL with the specified data in the request body.
+
+---
+
+How to obtain request headers?
+
+curl -H "Content-Type: application/json" "https://www.example.com/api"
+curl -H "Content-Type: application/json" -H "Accept: application/json" "https://www.example.com"
+
