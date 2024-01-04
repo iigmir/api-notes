@@ -55,3 +55,4 @@ fetch('https://example.com/api/data')
 ## See also
 
 * <https://en.wikipedia.org/wiki/Web_API>
+* <https://ithelp.ithome.com.tw/users/20107688/ironman/1507>
