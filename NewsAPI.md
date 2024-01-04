@@ -11,7 +11,7 @@ There are three ways adding the API key:
 
 1. API with the `apiKey` query string: `GET https://newsapi.org/v2/everything?q=keyword&apiKey={APIKEY}`.
 2. Add the [`X-Api-Key`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) header at the request.
-3. Add the [`Authorization`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) header string.
+3. Add the [`Authorization`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) header at the request.
 
 ## Parameters
 
