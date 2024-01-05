@@ -53,3 +53,21 @@ And now you can access `data` prop. Let's see the first example, [*Eromanga-Sens
     }
 }
 ```
+
+How about `/manga/tag`? Well, it is something like this:
+
+```json
+{
+    "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+    "type": "tag",
+    "attributes": {
+        "name": {
+            "en": "Oneshot"
+        },
+        "description": {},
+        "group": "format",
+        "version": 1
+    },
+    "relationships": []
+}
+```
