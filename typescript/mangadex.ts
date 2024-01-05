@@ -3,32 +3,32 @@
  */
 export interface TagData {
     id:            string;
-    type:          Type;
-    attributes:    Attributes;
+    type:          TagDataType;
+    attributes:    TagDataAttributes;
     relationships: any[];
 }
 
-export interface Attributes {
-    name:        Name;
-    description: Description;
-    group:       Group;
+export interface TagDataAttributes {
+    name:        TagDataName;
+    description: TagDataDescription;
+    group:       TagDataGroup;
     version:     number;
 }
 
-export interface Description {
+export interface TagDataDescription {
 }
 
-export enum Group {
+export enum TagDataGroup {
     Content = "content",
     Format = "format",
     Genre = "genre",
     Theme = "theme",
 }
 
-export interface Name {
+export interface TagDataName {
     en: string;
 }
 
-export enum Type {
+export enum TagDataType {
     Tag = "tag",
 }
