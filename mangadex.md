@@ -5,17 +5,19 @@
 * [Redoc](https://api.mangadex.org/docs/redoc.html)
 * [Swagger](https://api.mangadex.org/docs/swagger.html)
 
-## Example: [Entity Comments](https://api.mangadex.org/docs/01-concepts/comments)
+## Introduction
 
-Used API:
+As a manga app, there are three action you usually do:
 
-* [/statistics/manga/{uuid}](https://api.mangadex.org/docs/redoc.html#tag/Statistics/operation/get-statistics-manga-uuid): Get rating and comments for now.
+1. Searching the manga.
+2. Searching the chapter.
+3. Reading the manga.
 
-### `threadId` in `/statistics/manga`
+Fortunatelly, three are three entries for the actions there:
 
-`statistics.{uuid}.comments.threadId`: Forum ID: `https://forums.mangadex.org/threads/{api.statistics.{uuid}.comments.threadId}`
-
-> If it is `null`, the entity doesn't have a backing comments thread, and therefore has no comments yet.
+1. [Search manga](https://api.mangadex.org/docs/03-manga/search) for searching the manga.
+2. [Searching for chapters](https://api.mangadex.org/docs/04-chapter/search) for searching the chapter.
+3. [Retrieving a chapter's images](https://api.mangadex.org/docs/04-chapter/retrieving-chapter/) for reading the manga.
 
 ## Example: [Search manga](https://api.mangadex.org/docs/03-manga/search)
 
@@ -186,3 +188,15 @@ For example:
 
 * Data mode: https://uploads.mangadex.org/data/c0d09a9eca8ad53d107e266c97c79517/e1-edd555cf1d18f91b969fa49d916e499017401769d6953986962e5cd36b2c8e0f.jpg
 * Data saver mode: https://uploads.mangadex.org/data-saver/c0d09a9eca8ad53d107e266c97c79517/e1-d387357f78dd286fce73347c5089920af37f0a01a254d802be589276674d983c.jpg
+
+## Example: [Entity Comments](https://api.mangadex.org/docs/01-concepts/comments)
+
+Used API:
+
+* [/statistics/manga/{uuid}](https://api.mangadex.org/docs/redoc.html#tag/Statistics/operation/get-statistics-manga-uuid): Get rating and comments for now.
+
+### `threadId` in `/statistics/manga`
+
+`statistics.{uuid}.comments.threadId`: Forum ID: `https://forums.mangadex.org/threads/{api.statistics.{uuid}.comments.threadId}`
+
+> If it is `null`, the entity doesn't have a backing comments thread, and therefore has no comments yet.
