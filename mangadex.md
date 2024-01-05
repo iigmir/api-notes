@@ -17,7 +17,7 @@ Used API:
 
 > If it is `null`, the entity doesn't have a backing comments thread, and therefore has no comments yet.
 
-## Example: [Search manga](https://api.mangadex.org/docs/03-manga/search/)
+## Example: [Search manga](https://api.mangadex.org/docs/03-manga/search)
 
 Used API:
 
@@ -71,3 +71,118 @@ How about `/manga/tag`? Well, it is something like this:
     "relationships": []
 }
 ```
+
+## Example: [Searching for chapters](https://api.mangadex.org/docs/04-chapter/search)
+
+Used API:
+
+* [/manga/{id}/feed](https://api.mangadex.org/docs/redoc.html#tag/Manga/operation/get-manga-id-feed)
+
+---
+
+Combining with [Search manga](https://api.mangadex.org/docs/03-manga/search), you can retrive manga chapters.
+
+Now that we got the ID of *Eromanga-Sensei*, which is `88a2312f-37ef-4ca1-bb98-c0891a50cac7`, let's get chapters from the [API](https://api.mangadex.org/manga/88a2312f-37ef-4ca1-bb98-c0891a50cac7/feed):
+
+```json
+{
+    "result":"ok",
+    "response":"collection",
+    "data":[{}],
+    "limit":100,
+    "offset":0,
+    "total":252
+}
+```
+
+100 in 252! What should we do?
+
+1. Go to next page: `https://api.mangadex.org/manga/88a2312f-37ef-4ca1-bb98-c0891a50cac7/feed?offset=100`
+2. Limit the language to Engish: `https://api.mangadex.org/manga/88a2312f-37ef-4ca1-bb98-c0891a50cac7/feed?translatedLanguage[]=en`
+
+Let's limit the language Engish:
+
+```json
+{
+    "result":"ok",
+    "response":"collection",
+    "data":[{}],
+    "limit":100,
+    "offset":0,
+    "total":82
+}
+```
+
+That's good.
+
+## Example: [Retrieving a chapter's images](https://api.mangadex.org/docs/04-chapter/retrieving-chapter/)
+
+Used API:
+
+* [/at-home/server/{chapterId}](https://api.mangadex.org/docs/redoc.html#tag/AtHome/operation/get-at-home-server-chapterId)
+
+---
+
+And now, here's the most important part: Manga. How to get them? Well, when we [searching for chapters](https://api.mangadex.org/docs/04-chapter/search), we get each chapter:
+
+```json
+{
+    "id": "40e7e8a4-155c-4b1b-be7e-eb11f8f76f03",
+    "type": "chapter",
+    "attributes": {
+        "volume": "8",
+        "chapter": "50",
+        "title": "Eromanga-sensei VS Eromanga-sensei G Epilogue",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-02-27T19:46:42+00:00",
+        "readableAt": "2020-02-27T19:46:42+00:00",
+        "createdAt": "2020-02-27T19:46:42+00:00",
+        "updatedAt": "2020-02-27T19:46:42+00:00",
+        "pages": 30,
+        "version": 1
+    },
+    "relationships": [
+        {
+            "id": "88a2312f-37ef-4ca1-bb98-c0891a50cac7",
+            "type": "manga"
+        },
+        {
+            "id": "4550150d-31ea-444e-a822-dbdd14702c7a",
+            "type": "user"
+        }
+    ]
+}
+```
+
+The most important property here is `id`. We need it for calling the [/at-home/server API](https://api.mangadex.org/at-home/server/40e7e8a4-155c-4b1b-be7e-eb11f8f76f03):
+
+```json
+{
+    "result": "ok",
+    "baseUrl": "https:\/\/uploads.mangadex.org",
+    "chapter": {
+        "hash": "c0d09a9eca8ad53d107e266c97c79517",
+        "data": [
+            "e1-edd555cf1d18f91b969fa49d916e499017401769d6953986962e5cd36b2c8e0f.jpg",
+            /* bypass */
+        ],
+        "dataSaver": [
+            "e1-d387357f78dd286fce73347c5089920af37f0a01a254d802be589276674d983c.jpg",
+            /* bypass */
+        ]
+    }
+}
+```
+
+There are two modes of the manga chapter: `data` and `data-saver`. The former is the original size but slower, while the latter is compressed but faster.
+
+Basically you can use something like this:
+
+* Data mode: `{api.baseUrl}/data/{chapter.hash}/{chapter.data[]}`
+* Data saver mode: `{api.baseUrl}/data-saver/{chapter.hash}/{chapter.dataSaver[]}`
+
+For example:
+
+* Data mode: https://uploads.mangadex.org/data/c0d09a9eca8ad53d107e266c97c79517/e1-edd555cf1d18f91b969fa49d916e499017401769d6953986962e5cd36b2c8e0f.jpg
+* Data saver mode: https://uploads.mangadex.org/data-saver/c0d09a9eca8ad53d107e266c97c79517/e1-d387357f78dd286fce73347c5089920af37f0a01a254d802be589276674d983c.jpg
