@@ -21,7 +21,7 @@ For example, the Literature work, [*Black Dagger Brotherhood*](https://tvtropes.
 
 ### Exceptions:
 
-`VideoExamples` is not abaiable here.
+`VideoExamples` is not available here.
 
 https://tvtropes.org/pmwiki/context.php?groupname=VideoExamples&title=Hell
 
@@ -73,5 +73,5 @@ const fn = (responseText) => {
         return JSON.parse(jsonObject);
     }
     return {};
-
-}```
+}
+```
