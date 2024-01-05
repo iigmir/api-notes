@@ -1,3 +1,11 @@
+---
+name: Pocket
+site: https://getpocket.com
+api-site: https://getpocket.com/developer
+free-authentication: false
+free-price: true
+---
+
 # [Pocket](https://getpocket.com)
 
 * [Welcome to the Pocket API](https://getpocket.com/developer)
