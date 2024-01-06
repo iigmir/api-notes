@@ -1,6 +1,7 @@
 # [NASA](https://www.nasa.gov)
 
 * <https://api.nasa.gov/>
+* TypeScript: `typescript/nasa-search-api.ts`
 
 You must get an [API key](https://api.nasa.gov/#signUp) and attach it on `api_key`, but for exploring use `api_key=DEMO_KEY` is fine.
 

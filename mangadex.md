@@ -4,6 +4,7 @@
 * [Rate limits](https://api.mangadex.org/docs/2-limitations/#endpoint-specific-rate-limits)
 * [Redoc](https://api.mangadex.org/docs/redoc.html)
 * [Swagger](https://api.mangadex.org/docs/swagger.html)
+* TypeScript: `typescript/mangadex.ts`
 
 ## Introduction
 
