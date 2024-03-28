@@ -1,6 +1,6 @@
 # [TV Tropes](https://tvtropes.org)
 
-Unfortnately, [there're no public APIs avaiable in TVTropes](https://tvtropes.org/pmwiki/posts.php?discussion=15421549710A54432900) <https://tvtropes.org/pmwiki/posts.php?discussion=14313163830A95025400><https://tvtropes.org/pmwiki/posts.php?discussion=14478420050A97600200>. So we need to get contents in other way.
+Unfortnately, [there're no public APIs avaiable in TVTropes](https://tvtropes.org/pmwiki/posts.php?discussion=15421549710A54432900), <https://tvtropes.org/pmwiki/posts.php?discussion=14313163830A95025400>, <https://tvtropes.org/pmwiki/posts.php?discussion=14478420050A97600200>. So we need to get contents in other way.
 
 ## Basic page API
 
@@ -21,7 +21,7 @@ For example, the Literature work, [*Black Dagger Brotherhood*](https://tvtropes.
 
 ### Exceptions:
 
-`VideoExamples` is not abaiable here.
+`VideoExamples` is not available here.
 
 https://tvtropes.org/pmwiki/context.php?groupname=VideoExamples&title=Hell
 
@@ -73,5 +73,5 @@ const fn = (responseText) => {
         return JSON.parse(jsonObject);
     }
     return {};
-
-}```
+}
+```

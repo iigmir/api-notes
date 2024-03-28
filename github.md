@@ -50,3 +50,20 @@ Some additional params:
 * `path`: Commit log of given file/path
 * `author`: Commit log of given author
 * `committer`: Commit log of given committer
+
+## Quota, Authentication, and so on
+
+You may face [rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) when using APIs without token. If so, refer [authentication at getting started with the REST API](https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28&tool=javascript#authentication) and [managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) for details.
+
+You can go to [personal access tokens](https://github.com/settings/tokens and generate your personal access token. You'll get a token, said, `YOUR-TOKEN`. Add it on your HTTP request's [`Authorization`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) header like: `Authorization: Bearer YOUR-TOKEN`.
+
+```javascript
+// See: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+const GITHUB_TOKEN = "YOUR-TOKEN";
+const ajax = fetch("https://api.github.com/octocat", {
+    headers: {
+        "Authorization": `Bearer ${GITHUB_TOKEN}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+});
+```
