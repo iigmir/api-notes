@@ -64,4 +64,4 @@ https://bocchi-the-rock.fandom.com/api.php?action=parse&page=Ryo_Yamada&prop=ima
     * `prop=imageinfo`
     * `titles=file:{FILE}`
 
-https://bocchi-the-rock.fandom.com/api.php?action=query&redirects=&titles=file:Ikuyo_Kita_Character_Design_2.png&iiprop=url&prop=imageinfo&format=json
+https://rationalwiki.org/w/api.php?action=query&redirects=&titles=file:CMIlogo.gif&iiprop=url&prop=imageinfo&format=json
