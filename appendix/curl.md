@@ -1,3 +1,7 @@
+# [cURL](https://curl.se)
+
+## How to create a HTTP request on cURL
+
 To make a cURL POST request, you can follow these steps:
     Open a terminal window.
     Type the following command to send a POST request with cURL:
@@ -16,7 +20,7 @@ This will send the POST request to the specified URL with the specified data in 
 
 ---
 
-How to obtain request headers?
+## How to obtain request headers?
 
 curl -H "Content-Type: application/json" "https://www.example.com/api"
 curl -H "Content-Type: application/json" -H "Accept: application/json" "https://www.example.com"
