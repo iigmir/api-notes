@@ -3,6 +3,7 @@
 Since lots of sites use Mediawiki, the Mediawiki API is a thing. Most Mediawiki APIs are free to access: You don't need to obtain account to use it.
 
 * <https://www.mediawiki.org/wiki/API:Main_page>
+* <https://en.wikipedia.org/w/api.php>
 
 ## Action API and REST API
 
