@@ -18,8 +18,8 @@ There are three ways adding the API key:
 ### Common parameters
 
 * ✅: Required
-* ✔️: Avaiable
-* ❌: Unavaiable
+* ✔️: Available
+* ❌: Unavailable
 
 | Endpoints | `apiKey` | `q` | `category` | `language` | `country` | `sources` | `pageSize` | `page` |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
