@@ -51,7 +51,7 @@ If you don't know what fields should use, you can try `all` to find fields.
 
 * `AND` (`,`): For example, `Taiwan AND Hong Kong` return news with "Taiwan" and "Hong Kong".
 * `OR` (`|`): For example, `food OR alcohol` return news with "food" and "alcohol".
-* `NOT` (`-`): For example, `Russia AND NOT Ukraine` return news with "Taiwan" and without(`NOT`) "Ukraine".
+* `NOT` (`-`): For example, `Russia AND NOT Ukraine` return news with "Russia" and without(`NOT`) "Ukraine".
 * `()`: Priority. For example, `Palestinian AND (UK OR France OR Germany)` return news with "Palestinian" and either three of them: "UK", "France", and "Germany".
 * `""`: The exact keyword. For example, `"Bocchi the Rock!"` returns exactly the keyword ["Bocchi the Rock!"](https://bocchi-the-rock.fandom.com), not "Bocchi" or "Rock".
 
