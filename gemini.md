@@ -57,3 +57,8 @@ if ($response === false) {
 // Close cURL session
 curl_close($ch);
 ```
+
+## Webpage
+
+* <https://github.com/iigmir/gmini-api-f2e>
+* <https://ai.google.dev/tutorials/get_started_web>
