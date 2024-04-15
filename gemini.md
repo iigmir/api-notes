@@ -58,6 +58,12 @@ if ($response === false) {
 curl_close($ch);
 ```
 
+## Google SDK
+
+* <https://esm.run/@google/generative-ai>
+* <https://github.com/google/generative-ai-js>
+* <https://ai.google.dev/api/rest/v1/Content>
+
 ## Webpage
 
 * <https://github.com/iigmir/gmini-api-f2e>
