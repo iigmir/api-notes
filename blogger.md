@@ -17,31 +17,122 @@ This returns:
 
 ```json
 {
-  "kind": "blogger#blog",
-  "id": "5235590154125226279",
-  "name": "编程随想的博客",
-  "description": "",
-  "published": "2009-01-15T21:48:23+08:00",
-  "updated": "2024-04-16T10:42:58+08:00",
-  "url": "http://program-think.blogspot.com/",
-  "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279",
-  "posts": {
-    "totalItems": 712,
-    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts"
-  },
-  "pages": {
-    "totalItems": 4,
-    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/pages"
-  },
-  "locale": {
-    "language": "zh",
-    "country": "CN",
-    "variant": ""
-  }
+    "kind": "blogger#blog",
+    "id": "5235590154125226279",
+    "name": "编程随想的博客",
+    "description": "",
+    "published": "2009-01-15T21:48:23+08:00",
+    "updated": "2024-04-16T10:42:58+08:00",
+    "url": "http://program-think.blogspot.com/",
+    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279",
+    "posts": {
+        "totalItems": 712,
+        "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts"
+    },
+    "pages": {
+        "totalItems": 4,
+        "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/pages"
+    },
+    "locale": {
+        "language": "zh",
+        "country": "CN",
+        "variant": ""
+    }
 }
 ```
 
 Now we know the blog's ID is `5235590154125226279` and we can retrive their blog posts and pages by given API.
+
+Hint: `selfLink` can help you to access the extract resource if you are tired of assembling URL resources.
+
+## Get a post
+
+Usually, we get posts from the `/blogs/{blogId}/posts` API by resources from the `/blogs/{blogId}/posts` API.
+
+> `https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts?key=key=API_KEY`
+
+```json
+{
+    "kind": "blogger#postList",
+    "nextPageToken": "CgkIChjjsL70yTEQidmVCBgA",
+    "items": [
+        {
+            "kind": "blogger#post",
+            "id": "329569519001390000",
+            "blog": {
+                "id": "5235590154125226279"
+            },
+            "published": "2021-05-09T23:43:00+08:00",
+            "updated": "2021-05-09T23:54:20+08:00",
+            "url": "http://program-think.blogspot.com/2021/05/share-books.html",
+            "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/329569519001390000",
+            "title": "分享各类电子书（政治、IT、科普、历史、等，97本）",
+            "content": " (elided for readability) ",
+            "author": {
+                "id": "11741356469378252621",
+                "displayName": "编程随想",
+                "url": "https://www.blogger.com/profile/11741356469378252621",
+                "image": {
+                    "url": "//1.bp.blogspot.com/-_5va5DafROs/VtcrFXMaY_I/AAAAAAAABU4/lQWoB9z4jaI/s35/Thinker.jpg"
+                }
+            },
+            "replies": {
+                "totalItems": "880",
+                "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/5467820871462842098/comments"
+            },
+            "labels": [
+                "时事评论",
+                "政治",
+                "转载"
+            ],
+            "etag": "\"dGltZXN0YW1wOiAxNjIwNTUwMTE0MjIzCm9mZnNldDogMjg4MDAwMDAK\""
+        },
+        //  (elided for readability) 
+    ],
+    "etag": "\"MjAyNC0wNC0xNVQwODoyMToyMy4yMDBa\""
+}
+```
+
+If we want to access the [分享各类电子书（政治、IT、科普、历史、等，97本）](http://program-think.blogspot.com/2021/05/share-books.html) article here, we call `https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/329569519001390000` here.
+
+If you want to access from URL link, use `/blogs/{blogId}/posts/bypath` instead.
+
+> https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/bypath?path=/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html&key=API_KEY
+
+```json
+{
+    "kind": "blogger#post",
+    "id": "4808108558381001532",
+    "blog": {
+        "id": "5235590154125226279"
+    },
+    "published": "2018-09-21T23:56:00+08:00",
+    "updated": "2020-12-07T12:34:02+08:00",
+    "url": "http://program-think.blogspot.com/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html",
+    "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/4808108558381001532",
+    "title": "为什么马克思是错的？——全面批判马列主义的知名著作导读",
+    "content": " (elided for readability) ",
+    "author": {
+        "id": "11741356469378252621",
+        "displayName": "编程随想",
+        "url": "https://www.blogger.com/profile/11741356469378252621",
+        "image": {
+            "url": "//1.bp.blogspot.com/-_5va5DafROs/VtcrFXMaY_I/AAAAAAAABU4/lQWoB9z4jaI/s35/Thinker.jpg"
+        }
+    },
+    "replies": {
+        "totalItems": "404",
+        "selfLink": "https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/4808108558381001532/comments"
+    },
+    "labels": [
+        "经济",
+        "书评/影评",
+        "政治",
+        "政治.共产运动"
+    ],
+    "etag": "\"dGltZXN0YW1wOiAxNjA3MzE1NjQyNTc1Cm9mZnNldDogMjg4MDAwMDAK\""
+}
+```
 
 ## Get info of a user
 
