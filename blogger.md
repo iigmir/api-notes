@@ -1,4 +1,4 @@
-# [Blogger](https://www.blogger.com)
+# [Blogger/Blogspot](https://www.blogger.com)
 
 * <https://developers.google.com/blogger>
 * <https://developers.google.com/blogger/docs/3.0/reference>
@@ -133,6 +133,14 @@ If you want to access from URL link, use `/blogs/{blogId}/posts/bypath` instead.
     "etag": "\"dGltZXN0YW1wOiAxNjA3MzE1NjQyNTc1Cm9mZnNldDogMjg4MDAwMDAK\""
 }
 ```
+
+## The pagination thing
+
+We use `nextPageToken` attached in list resources to get the next page and `prevPageToken` for the previous page. To use the token, attach it as `pageToken` on your request.
+
+For example, if `nextPageToken` as page 2 is `CgkIFBCAjIKalS8Qp-Kq8Zewo9RIGLCX_-azt7fJBCAA` in the `/5235590154125226279/posts/329569519001390000/comments` resource, we call `https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/329569519001390000/comments?pageToken=CgkIFBCAjIKalS8Qp-Kq8Zewo9RIGLCX_-azt7fJBCAA&key=API_KEY` to get the second page.
+
+The `/posts/search/` API [ignores](https://stackoverflow.com/a/58015479) the `pageToken` param. Welp.
 
 ## Get info of a user
 
