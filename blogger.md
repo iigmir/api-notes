@@ -54,4 +54,16 @@ Authorization: /* OAuth 2.0 token here */
 
 [Alas.](https://github.com/google/google-api-javascript-client)
 
-## Hello
+## API endpoints under the `/blogs/{blogId}` resource for retriving
+
+The API follows [REST](https://developers.google.com/blogger/docs/3.0/getting_started#JSONP) makes things easier.
+
+* `/posts` (`/blogs/{blogId}/posts`)
+    * `/{postId}` (`/blogs/{blogId}/posts/{postId}`)
+        * `/comments` (`/blogs/{blogId}/posts/{postId}/comments`)
+            * `/{commentId}` (`/blogs/{blogId}/posts/{postId}/comments/{commentId}`)
+    * `/bypath?path={post-path}` (`/blogs/{blogId}/posts/bypath?path={post-path}`)
+    * `/search?q={query terms}` (`/blogs/{blogId}/posts/search={post-path}`)
+* `/pages` (`/blogs/{blogId}/pages`)
+    * `/{pageId}` (`/blogs/{blogId}/pages/{pageId}`)
+* `/pageviews` (`/blogs/{blogId}/pageviews`)
