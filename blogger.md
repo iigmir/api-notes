@@ -49,7 +49,7 @@ Hint: `selfLink` can help you to access the extract resource if you are tired of
 
 Usually, we get posts from the `/blogs/{blogId}/posts` API by resources from the `/blogs/{blogId}/posts` API.
 
-> `https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts?key=key=API_KEY`
+> <https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts?key=key=API_KEY>
 
 ```json
 {
@@ -97,7 +97,7 @@ If we want to access the [分享各类电子书（政治、IT、科普、历史�
 
 If you want to access from URL link, use `/blogs/{blogId}/posts/bypath` instead.
 
-> https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/bypath?path=/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html&key=API_KEY
+> <https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts/bypath?path=/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html&key=API_KEY>
 
 ```json
 {
@@ -148,8 +148,8 @@ You get the user's info by calling the .
 
 Besides API key, you also need [OAuth token](https://developers.google.com/identity/protocols/oauth2) which is another complicated subject there. See [Authorizing requests and identifying your application](https://developers.google.com/blogger/docs/3.0/using#auth) for details.
 
-> https://www.googleapis.com/blogger/v3/users/self/blogs
-Authorization: /* OAuth 2.0 token here */
+> <https://www.googleapis.com/blogger/v3/users/self/blogs>
+> Authorization: /* OAuth 2.0 token here */
 
 [Alas.](https://github.com/google/google-api-javascript-client)
 
