@@ -49,7 +49,7 @@ Hint: `selfLink` can help you to access the extract resource if you are tired of
 
 Usually, we get posts from the `/blogs/{blogId}/posts` API by resources from the `/blogs/{blogId}/posts` API.
 
-> <https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts?key=key=API_KEY>
+> <https://www.googleapis.com/blogger/v3/blogs/5235590154125226279/posts?key=API_KEY>
 
 ```json
 {
