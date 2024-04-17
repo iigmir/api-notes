@@ -21,4 +21,4 @@ xhr.onreadystatechange = function () {
 xhr.send('');
 ```
 
-Basing the param `ServiceKey`, which is "[a]uthentication key received from public data portal", it can be assumed you need API keys for accessing API keys?
+Judging on the `ServiceKey` param, which is "[a]uthentication key received from public data portal", it can be assumed you need API keys for accessing API keys?
