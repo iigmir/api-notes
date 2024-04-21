@@ -15,6 +15,5 @@ API endpoint URLs are mostly formatted in:
 * `DATA_FORMAT`: Common formats are: `csv`, `json`, `.rdf`, and `xml`.
 
 ## Response format
- {
-    
- }
+
+For JSON, the API contains two props: `meta` and `data`. `meta` describe the API info while `data` lists all datas you may needed.
