@@ -57,3 +57,12 @@ A [playground](https://v2.jokeapi.dev/#try-it) is avaiable.
 ## [TheCocktailDB](https://www.thecocktaildb.com)
 
 * <https://www.thecocktaildb.com/api.php>
+
+## [xkcd](https://xkcd.com)
+
+* <https://xkcd.com/info.0.json> (current comic)
+* `https://xkcd.com/{ID}/info.0.json` (comic of `ID`)
+
+> Is there an interface for automated systems to access comics and metadata?
+> Yes. You can get comics through the JSON interface, at URLs like <https://xkcd.com/info.0.json> (current comic) and <https://xkcd.com/614/info.0.json> (comic #614). 
+> ~ From https://xkcd.com/about
