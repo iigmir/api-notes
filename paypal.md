@@ -47,6 +47,8 @@ At least `intent` and `purchase_units` are needed. `purchase_units` is an array 
 
 [`intent`](https://developer.paypal.com/docs/api/orders/v2/#orders_create!path=intent&t=request) can decide whether the payment should be immediately (`CAPTURE`) or authorised by the owner (`AUTHORIZE`) after the order is created.
 
+Then, use [`/v2/checkout/orders/{id}/capture`](https://developer.paypal.com/docs/api/orders/v2/#orders_capture) or [`/v2/checkout/orders/{id}/authorize`](https://developer.paypal.com/docs/api/orders/v2/#orders_authorize) to confirm the order.
+
 ## References
 
 * [How to Integrate PayPal Standard Checkout - YouTube](https://www.youtube.com/watch?v=MBfJEUGNNs0)
