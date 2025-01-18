@@ -66,3 +66,17 @@ A [playground](https://v2.jokeapi.dev/#try-it) is avaiable.
 > Is there an interface for automated systems to access comics and metadata?
 > Yes. You can get comics through the JSON interface, at URLs like <https://xkcd.com/info.0.json> (current comic) and <https://xkcd.com/614/info.0.json> (comic #614). 
 > ~ From https://xkcd.com/about
+
+## [Loripsum](https://loripsum.net/)
+
+### `/api/{number}/{type}/{length}`
+
+Generate random lorem ipsum text.
+
+* number: Number of paragraphs or words to generate (default: 1)
+* type: Type of content to generate, either paragraphs or words (default: paragraphs)
+* length: Length of each paragraph or word (default: long)
+
+### `/api/random`
+
+Generate random lorem ipsum text.
