@@ -15,6 +15,7 @@
 ### Avaiable values for `dataset`
 
 | Dataset name in Chinese | Description |
+|---|---|
 | 台股總覽 | TaiwanStockInfo
 | 股價日成交資訊 | TaiwanStockPrice
 | 即時股價 | TaiwanStockPriceTick
