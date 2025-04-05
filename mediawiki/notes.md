@@ -66,3 +66,19 @@ https://bocchi-the-rock.fandom.com/api.php?action=parse&page=Ryo_Yamada&prop=ima
     * `titles=file:{FILE}`
 
 https://rationalwiki.org/w/api.php?action=query&redirects=&titles=file:CMIlogo.gif&iiprop=url&prop=imageinfo&format=json
+
+### Get an image from picture of the day
+
+* [Images](https://www.mediawiki.org/wiki/Special:MyLanguage/API:Images) 
+* [Imageinfo](https://www.mediawiki.org/wiki/Special:MyLanguage/API:Imageinfo)
+
+* `action=query`
+    * `prop=images`
+    * `titles=Template:Potd/{DATE}` (ISO date like `2025-04-05`)
+* `action=query`
+    * `iiprop=url`
+    * `prop=imageinfo`
+    * `titles=file:{FILE}` (picture from `images` request)
+
+https://www.mediawiki.org/wiki/Special:MyLanguage/API:Picture_of_the_day_viewer
+
